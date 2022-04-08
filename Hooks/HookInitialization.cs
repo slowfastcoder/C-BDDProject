@@ -27,6 +27,7 @@ namespace SpecFlowProject2Selenium.Hooks
         public void AfterScenario()
         {
             //TODO: implement logic that has to run after executing each scenario
+
         }
     }
 }

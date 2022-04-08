@@ -55,7 +55,7 @@ namespace SpecFlowProject2Selenium.Features
         [Then(@"I verify whether the item is added to the list")]
         public void ThenIVerifyWhetherTheItemIsAddedToTheList()
         {
-            Assert.That(driver.FindElement(By.XPath("/html/body/div/div/div/ul/li[6]/span")).Text, Is.EqualTo("b"));
+            Assert.That(driver.FindElement(By.XPath("/html/body/div/div/div/ul/li[6]/span")).Text, Is.EqualTo("sampletodotext"));
         }
     }
 }

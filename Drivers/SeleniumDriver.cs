@@ -20,7 +20,8 @@ namespace SpecFlowProject2Selenium.Drivers
             //Hardcoded Firefoxption
             var firefoxOptions = new FirefoxOptions();
             string uri = "http://localhost:4444/wd/hub";
-            driver = new RemoteWebDriver(new Uri(uri), firefoxOptions.ToCapabilities());
+            //driver = new RemoteWebDriver(new Uri(uri), firefoxOptions.ToCapabilities());
+            driver = new FirefoxDriver();
 
             //Set the driver
             _scenarioContext.Set(driver, "WebDriver");
