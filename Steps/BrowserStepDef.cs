@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using SpecFlowProject2Selenium.Drivers;
 using System;
 using TechTalk.SpecFlow;
@@ -29,31 +30,32 @@ namespace SpecFlowProject2Selenium.Features
         [Given(@"I select the first item")]
         public void GivenISelectTheFirstItem()
         {
-            ScenarioContext.Current.Pending();
+            driver.FindElement(By.Name("li1")).Click();
         }
 
         [Given(@"I select the second item")]
         public void GivenISelectTheSecondItem()
         {
-            ScenarioContext.Current.Pending();
+            driver.FindElement(By.Name("li2")).Click();
+
         }
 
         [Given(@"I entr the new value in the textbox")]
         public void GivenIEntrTheNewValueInTheTextbox()
         {
-            ScenarioContext.Current.Pending();
+            driver.FindElement(By.Id("sampletodotext")).SendKeys("sampletodotext");
         }
 
         [When(@"I click the Submit button")]
         public void WhenIClickTheSubmitButton()
         {
-            ScenarioContext.Current.Pending();
+            driver.FindElement(By.Id("addbutton")).Click();
         }
 
         [Then(@"I verify whether the item is added to the list")]
         public void ThenIVerifyWhetherTheItemIsAddedToTheList()
         {
-            ScenarioContext.Current.Pending();
+            Assert.That(driver.FindElement(By.XPath("/html/body/div/div/div/ul/li[6]/span")).Text, Is.EqualTo("b"));
         }
     }
 }
