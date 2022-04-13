@@ -6,6 +6,7 @@ namespace SpecFlowProject2Selenium.Steps
 
     
 {
+   
     [Binding]
     public class SampleTableSteps
     {
@@ -26,5 +27,22 @@ namespace SpecFlowProject2Selenium.Steps
 
             }
         }
+
+        [When(@"I fill all the mandatory fields in the form (.*) (.*) and (.*)")]
+        public void WhenIFillAllTheMandatoryFieldsInTheFormAnd(string name, int age, int Phone, Table table)
+        {
+            var account = table.CreateInstance<EmployeeDetails>();
+
+            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Age : " + age.ToString());
+            Console.WriteLine("Phone Number: " + Phone.ToString());
+            Console.WriteLine("Email: " + account.Email);
+
+
+            //ScenarioContext.Current["InfoforNextStep"] = "Step1 Passed";
+            //Console.WriteLine(ScenarioContext.Current["InfoforNextStep"].ToString());
+
+        }
+
     }
 }
