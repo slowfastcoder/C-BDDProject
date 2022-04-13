@@ -20,26 +20,22 @@ namespace SpecFlowProject2Selenium.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("NonChromeBrowser")]
-    public partial class NonChromeBrowserFeature
+    [NUnit.Framework.DescriptionAttribute("SampleTable")]
+    public partial class SampleTableFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "NonChromeBrowser.feature"
+#line 1 "SampleTable.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "NonChromeBrowser", @"![Calculator](https://specflow.org/wp-content/uploads/2020/09/calculator.png)
-Simple calculator for adding **two** numbers
-
-Link to a feature: [Calculator](SpecFlowProject2Selenium/Features/Calculator.feature)
-***Further read***: **[Learn more about how to generate Living Documentation](https://docs.specflow.org/projects/specflow-livingdoc/en/latest/LivingDocGenerator/Generating-Documentation.html)**", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "SampleTable", "\tSimple calculator for adding two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -78,24 +74,15 @@ Link to a feature: [Calculator](SpecFlowProject2Selenium/Features/Calculator.fea
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add items to the ToDoApp - Firefox")]
+        [NUnit.Framework.DescriptionAttribute("Create a new employee with mandatary details")]
         [NUnit.Framework.CategoryAttribute("mytag")]
-        [NUnit.Framework.TestCaseAttribute("firefox", "86.0", "WIN10", null)]
-        public virtual void AddItemsToTheToDoApp_Firefox(string browser, string browserVersion, string oS, string[] exampleTags)
+        public virtual void CreateANewEmployeeWithMandataryDetails()
         {
-            string[] @__tags = new string[] {
+            string[] tagsOfScenario = new string[] {
                     "mytag"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("Browser", browser);
-            argumentsOfScenario.Add("BrowserVersion", browserVersion);
-            argumentsOfScenario.Add("OS", oS);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add items to the ToDoApp - Firefox", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 9
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create a new employee with mandatary details", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -115,31 +102,18 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Browser",
-                            "BrowserVersion",
-                            "OS"});
-                table2.AddRow(new string[] {
-                            "Firefox",
-                            "84.0",
-                            "Windows 10"});
-#line 10
- testRunner.Given("I navigate to LambdaTest App on the following environment", ((string)(null)), table2, "Given ");
-#line hidden
-#line 13
- testRunner.And("I select the first item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 14
- testRunner.And("I select the second item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 15
- testRunner.And("I entr the new value in the textbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 16
- testRunner.When("I click the Submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 17
- testRunner.Then("I verify whether the item is added to the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Name",
+                            "Age",
+                            "Phone",
+                            "Email"});
+                table3.AddRow(new string[] {
+                            "Apple",
+                            "99",
+                            "1800123456",
+                            "apple@automatetheworld.com"});
+#line 8
+ testRunner.When("I fill all the mandatory fields in the form", ((string)(null)), table3, "When ");
 #line hidden
             }
             this.ScenarioCleanup();

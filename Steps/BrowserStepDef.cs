@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using SpecFlowProject2Selenium.Drivers;
 using System;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 
 namespace SpecFlowProject2Selenium.Features
 {
@@ -22,8 +23,10 @@ namespace SpecFlowProject2Selenium.Features
         [Given(@"I navigate to LambdaTest App on the following environment")]
         public void GivenINavigateToLambdaTestAppOnTheFollowingEnvironment(Table table)
         {
-            //ScenarioContext.Current.Pending();
-            driver = _scenarioContext.Get<SeleniumDriver>("SeleniumDriver").Setup();
+            dynamic data = table.CreateDynamicInstance();
+            //driver = _scenarioContext.Get<SeleniumDriver>("SeleniumDriver").Setup();
+            driver = _scenarioContext.Get<SeleniumDriver>("SeleniumDriver").Setup((string)data.Browser);
+
             driver.Url = "https://lambdatest.github.io/sample-todo-app/";
         }
 

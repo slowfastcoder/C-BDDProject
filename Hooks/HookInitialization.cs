@@ -1,9 +1,12 @@
-﻿using SpecFlowProject2Selenium.Drivers;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
+using SpecFlowProject2Selenium.Drivers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using TechTalk.SpecFlow;
+[assembly: Parallelizable(ParallelScope.Fixtures)]
 
 namespace SpecFlowProject2Selenium.Hooks
 {
@@ -27,7 +30,8 @@ namespace SpecFlowProject2Selenium.Hooks
         public void AfterScenario()
         {
             //TODO: implement logic that has to run after executing each scenario
-
+            Console.WriteLine("Selenium webdriver quit");
+            _scenarioContext.Get<IWebDriver>("WebDriver").Quit();
         }
     }
 }

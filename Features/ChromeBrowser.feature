@@ -1,4 +1,4 @@
-﻿Feature: NonChromeBrowser
+﻿Feature: ChromeBrowsers
 ![Calculator](https://specflow.org/wp-content/uploads/2020/09/calculator.png)
 Simple calculator for adding **two** numbers
 
@@ -9,7 +9,7 @@ Link to a feature: [Calculator](SpecFlowProject2Selenium/Features/Calculator.fea
 Scenario: Add items to the ToDoApp - Firefox
 	Given I navigate to LambdaTest App on the following environment
 		| Browser | BrowserVersion     | OS    |
-		| Firefox | 84.0 |  Windows 10 |
+		| <Browser> | <BrowserVersion> |  <OS> |
 	And I select the first item
 	And I select the second item
 	And I entr the new value in the textbox
@@ -19,4 +19,4 @@ Scenario: Add items to the ToDoApp - Firefox
 	Examples:
 		
 		| Browser | BrowserVersion     | OS    |
-		| firefox | 86.0               | WIN10 |
+		| firefox | 86.0 |  WIN10 |
